@@ -33,6 +33,7 @@ function Homepage({setSelect, setMetric, setColor}) {
     if (data.description == 'clear sky') setBg("rgba(238,247,141,.5)"); //Orange
     else if (data.description =='few clouds') setBg("rgba(238,247,141,.0.5)") //Yellow
     else if (data.description =='scattered clouds') setBg("rgba(183, 182, 181, 0.45)") //Light Grey
+    else if (data.description =='overcast clouds') setBg("rgba(183, 182, 181, 0.45)") //Light Grey
     else if (data.description =='broken clouds') setBg("rgba(183, 182, 181, 0.45)") // Light Grey
     else if (data.description =='rain') setBg("rgba(68, 68, 68, 0.45)") //Dark Grey
     else if (data.description =='thunderstorm') setBg("rgba(68, 68, 68, 0.45)") //Dark Grey
