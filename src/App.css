@@ -1,38 +1,188 @@
-.App {
-  text-align: center;
+:root {
+  --section-overlay: rgba(0,0,0, 0.7);
+  --background-overlay: rgba(0,0,0, 0.2);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  position: fixed;
+  font-size: 30px;
+  background-color: var(--background-overlay);
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+  color: white;
+  width: 400px;
+}
+
+.main-nav:hover {
+  cursor: pointer;
+  color: rgb(117, 117, 117);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.App {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  /* min-width: 500px; */
+}
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  /* background-color: var(--background-overlay); */
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  height: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: column;
+  padding: 1rem;
+}
+
+/* Top */
+
+.section {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.4rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.searchSection {
+  /* border: 2px red solid; */
+  display: flex;
+  background-color: var(--background-overlay);
+  border-radius: 0.4rem;
+  padding: 1rem;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  /* height: 650px; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.section__inputs, .section__temperature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--section-overlay);
+  margin: .5rem
+}
+
+.section__inputs {
+  display: flex;
+  justify-content: space-between;
   }
-  to {
-    transform: rotate(360deg);
+
+  .section__inputs>input{
+    border: 0.8px solid white;
+    border-radius: 0.4rem;
+    background-color: transparent;
+    color: white;
+    padding: 0.5rem;
+    font-size: 16px;
+    width: 150px;
+  }
+
+.section__inputs>input:focus {
+  outline: none;
+}
+
+.section__inputs>button {
+  padding: 10px 50px;
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.995);
+}
+
+.section__inputs>button:hover {
+  cursor: pointer;
+  background-color: lightgray;
+}
+
+.icon {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon>h3 {
+  font-size: 15px;
+  font-weight: 200;
+  text-transform: capitalize;
+}
+
+.temperature>h1 {
+  font-size: 60px;
+  width: 232px;
+}
+
+@media screen and (max-width: 375px)  {
+  .nav {
+    font-size: 17px;
+    width: 375px;
+  }
+  .App {
+      /* background-size: cover; */
+      height: 667px;
+      width: 375px;
+  }
+  .section__inputs{
+    width: 350px;
+  }
+  .section__temperature{
+    height: 200px;
+    width: 350px;
+    /* background-color: blueviolet; */
+    justify-content: space-evenly;
+  }
+  .overlay{
+      height: 100%;
+  }
+
+  .container {
+    height: 667px;
+    width: 375px;
+  }
+  .card {
+    width: 150px;
+    font-size: 14px;
+  }
+  .temperature>h1 {
+    font-size: 45px;
+    width: 140px;
+  }
+  .icon {
+    width: 120px;
+    text-align: center;
+  }
+  .searchSection{
+    background-color: transparent;
+    height: 650px;
+    width: 375px;
+    padding: 0;
+    position: fixed;
+    top: 20px;
   }
 }
+

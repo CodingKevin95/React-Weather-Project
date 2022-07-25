@@ -1,0 +1,128 @@
+.staticContainer {
+    /* max-width: 800px; */
+    margin: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .section__temperature2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--section-overlay);
+    width: 445px;
+  }
+  
+  .aboutBg {
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .staticCity {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    padding: 1rem;
+    background-color: var(--background-overlay);
+    border-radius: 0.4rem;
+ }
+
+ .icon2 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+ }
+
+ .icon2>h3 {
+  font-size: 15px;
+  font-weight: 200;
+  text-transform: capitalize;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+ }
+
+ .temperature2>h1 {
+  font-size: 60px;
+ }
+ 
+
+
+ @media screen and (max-width: 820px) {
+    .aboutBg {
+        height: 1180px;
+        width: 820px;
+    }
+    .section__temperature2 {
+        width: 350px;
+        height: 200px;
+    }
+ }
+
+
+  @media screen and (max-width: 375px) {
+    .staticCity {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: .5rem;
+        width: 375px;
+        height: 650px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: transparent;
+        position: fixed;
+        top: 20px
+    }
+
+    .staticContainer {
+        height: 667px;
+        width: 375px;
+        padding: 1rem;
+    }
+    .aboutBg {
+        height: 667px;
+        width: 375px;
+    }
+    .nav {
+        font-size: 17px;
+        width: 375px;
+      }
+    .section__temperature2 {
+        width: 300px;
+        height: 153px;
+        
+        justify-content: space-evenly;
+    }
+    .temperature2>h1{
+        font-size: 40px;
+    }
+    .icon2 {
+      /* border: 2px solid red; */
+      width: 150px;
+      height: 130px;
+      display: flex;
+      justify-content: space-around;
+    }
+    .icon2>img {
+      height: 75px;
+    }
+    .icon2>h3 {
+      font-size: 13px;
+      width: 150px;
+    }
+    h1 {
+      width: 130px;
+      /* border: 3px solid blue; */
+    }
+
+}
